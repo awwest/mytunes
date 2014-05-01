@@ -13,6 +13,13 @@ var PlayerView = Backbone.View.extend({
     this.render();
   },
 
+  events: {
+    'ended': function() {
+    // remove the current song from the queue
+    // select the next song on the queue and invoke it's play() method
+    }
+  },
+
   render: function(){
     return this.$el.attr('src', this.model ? this.model.get('url') : '');
   }
