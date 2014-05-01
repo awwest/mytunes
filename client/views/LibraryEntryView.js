@@ -8,7 +8,7 @@ var LibraryEntryView = Backbone.View.extend({
   events: {
     // when we do not specify a Jquery selector like 'click selector', this event listener is bound to $el, otherwise it is bound to the specified selector
     'click': function() {
-      this.model.play();
+      this.model.enqueue();
     }
   },
 
