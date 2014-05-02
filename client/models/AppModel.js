@@ -22,6 +22,7 @@ var AppModel = Backbone.Model.extend({
         this.get('songQueue').push(song);
       }else{
         this.get('songQueue').remove(song);
+        console.log(" Song removed. ");
       }
     }, this);
 

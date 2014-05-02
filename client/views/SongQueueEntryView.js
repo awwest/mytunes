@@ -7,9 +7,15 @@ var SongQueueEntryView = Backbone.View.extend({
 
   events: {
     // when we do not specify a Jquery selector like 'click selector', this event listener is bound to $el, otherwise it is bound to the specified selector
-    // 'click': function() {
-    //   this.model.enqueue();
-    // }
+    // 'ended': function() {
+    //   console.log("Song over");
+    //   this.model.dequeue();
+    // },
+
+    'click': function(){
+      console.log(" Clicked. ");
+      this.model.dequeue();
+    }
   },
 
   render: function(){
